@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: PTSansBoldItalic;
+    src: url(fonts/PTSans-BoldItalic.ttf);
+}
+
+@font-face {
     font-family: PTSansReg;
     src: url(fonts/PTSans-Regular.ttf);
 
@@ -11,6 +16,20 @@
 
 * {
     color: #000;
+    font-family: PTSansReg;
+}
+
+h2 {
+    font-size: 36px;
+    font-family: PTSansBold;
+}
+
+span {
+    font-family: PTSansBoldItalic;
+}
+
+p {
+    font-size: 18px;
 }
 
 .main-frame {
