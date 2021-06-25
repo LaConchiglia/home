@@ -42,6 +42,9 @@ h1, h3 {
     background-position: center;
 }
 
+.image {
+    height: 180px;
+}
 
 .en {
     background-image: url(./assets/uk.JPEG);
