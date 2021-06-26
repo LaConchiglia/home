@@ -325,7 +325,8 @@ body {
 
 .calendar p.today,
 .calendar p.today:hover {
-  color: #49bedb;
+  color: black;
+  background-color: rgb(253, 234, 227);
 }
 
 .calendar p.selected,

@@ -90,7 +90,7 @@ app.controller("CalendarCtrl", function () {
     "#575be3",
   ];
   this.monthColor = colorsOfTheMonths[this.todayMonth];
-  this.selectedDate = today;
+  this.selectedDate = selectedDay1;
   this.selectedDateMonth = this.selectedDate.getMonth();
   this.selectedDateMonthName = this.months[this.selectedDateMonth];
   this.selectedDateDay = this.selectedDate.getDay();
