@@ -31,7 +31,7 @@
 
         <div class="container d-flex flex-row">
             <div class="col-3 logo-div pt-5">
-                <img src="assets/logo.png" class="image" alt="logo La Conchiglia">
+                <img src="style/assets/logo.png" class="image" alt="logo La Conchiglia">
             </div>
             <div class="col-6 pt-5 m-auto text-center">
                 <h1>ISOLA DI VENERE</h1>
@@ -116,40 +116,38 @@
                         <a href="https://laconchiglia.github.io/home/">presente sito</a> il 20.09.2021. 
                     </p>
 
-                    <div class="calendar">
-                        <div ng-app="calendarApp" style="height:100%;">
-                            <div ng-controller="CalendarCtrl as cal" style="height:max-content;">
-                                    <div class="calendar">
-                                <div class="calendar-head">
-                                    <div class="arrow-left" ng-click="cal.previousMonth(cal.currentMonth.date)">
-                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                     viewBox="0 0 18.5 32.9" style="enable-background:new 0 0 18.5 32.9;" xml:space="preserve">
-                                    <style type="text/css">
-                                        .st0{fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                    <div ng-app="calendarApp" style="height:max-content;">
+                        <div ng-controller="CalendarCtrl as cal" style="height:max-content;">
+                            <div class="calendar ml-5">
+                            <div class="calendar-head">
+                                <div class="arrow-left" ng-click="cal.previousMonth(cal.currentMonth.date)">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 18.5 32.9" style="enable-background:new 0 0 18.5 32.9;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0{fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                                    </style>
+                                    <polyline class="st0" points="15.5,3 3,16.5 15.5,29.9 "/>
+                                </svg>
+                                </div>
+                                    <h3 class="month">{{cal.currentMonth.monthName}} {{cal.currentMonth.year}}</h3>
+                                <div class="arrow-right" ng-click="cal.nextMonth(cal.currentMonth.date)">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 18.5 32.9" style="enable-background:new 0 0 18.5 32.9;" xml:space="preserve">
+                                        <style type="text/css">
+                                            .st0{fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
                                         </style>
-                                        <polyline class="st0" points="15.5,3 3,16.5 15.5,29.9 "/>
+                                        <polyline class="st0" points="3,29.9 15.5,16.5 3,3 "/>
                                     </svg>
-                                    </div>
-                                        <h3 class="month">{{cal.currentMonth.monthName}} {{cal.currentMonth.year}}</h3>
-                                    <div class="arrow-right" ng-click="cal.nextMonth(cal.currentMonth.date)">
-                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                             viewBox="0 0 18.5 32.9" style="enable-background:new 0 0 18.5 32.9;" xml:space="preserve">
-                                            <style type="text/css">
-                                                .st0{fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                                            </style>
-                                            <polyline class="st0" points="3,29.9 15.5,16.5 3,3 "/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="calendar-body">
-                                    <p class="day" ng-repeat="dayShort in cal.days.short track by $index">{{dayShort}}</p>
-                                    <p class="date" ng-repeat="date in cal.currentMonth.dates track by $index" ng-class="{'selected': date.selected, 'today': date.today, 'show': date.show === false}" ng-click="cal.SelectDate(date.id, date.show)">{{date.date.getDate()}}</p>
                                 </div>
                             </div>
-                
+                            <div class="calendar-body">
+                                <p class="day" ng-repeat="dayShort in cal.days.short track by $index">{{dayShort}}</p>
+                                <p class="date" ng-repeat="date in cal.currentMonth.dates track by $index" ng-class="{'selected': date.selected, 'today': date.today, 'show': date.show === false}" ng-click="cal.SelectDate(date.id, date.show)">{{date.date.getDate()}}</p>
                             </div>
-                          </div>
-                    </div>
+                        </div>
+            
+                        </div>
+                        </div>
 
                 <h3 class="mt-5 ml-md-3 ml-sm-1">CRITERI DI VALUTAZIONE </h3>
                     <p class="ml-md-5 ml-sm-3">
