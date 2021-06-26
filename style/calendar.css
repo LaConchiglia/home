@@ -231,7 +231,7 @@ body {
 
 .calendar {
   width: 240px;
-  margin: 10px auto 10px 0px;
+  margin: 10px 0px 10px 0px;
   border: 1px solid #ddd;
   box-sizing: border-box;
   overflow: auto;
@@ -266,7 +266,7 @@ body {
 .calendar p.date {
   font-size: 13px;
   color: #555;
-  font-weight: bold;
+  font-family: PTSansBold;
   padding: 7px 0;
   cursor: pointer;
   margin-bottom: 4px;
