@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @font-face {
     font-family: PTSansBold;
     src: url(fonts/PTSans-Bold.ttf);
@@ -58,6 +65,8 @@ h3 {
 }
 
 .lang-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -66,6 +75,8 @@ h3 {
     width: 28px;
     border-radius: 50px;
     display: inline-block;
+    -webkit-transition: 200ms;
+    -o-transition: 200ms;
     transition: 200ms;
 }
 
@@ -91,13 +102,21 @@ h3 {
 }
 
 .it:hover {
-    transform: scale(1.18);
+    -webkit-transform: scale(1.18);
+        -ms-transform: scale(1.18);
+            transform: scale(1.18);
+    -webkit-transition: 200ms;
+    -o-transition: 200ms;
     transition: 200ms;
     cursor: pointer;
 }
 
 .en:hover {
-    transform: scale(1.18);
+    -webkit-transform: scale(1.18);
+        -ms-transform: scale(1.18);
+            transform: scale(1.18);
+    -webkit-transition: 200ms;
+    -o-transition: 200ms;
     transition: 200ms;
     cursor: pointer;
 }
@@ -122,6 +141,10 @@ h3 {
     position: fixed;
     bottom: 50px;
     right: 50px;
+    -webkit-transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    -o-transition: background-color .3s, 
+      opacity .5s, visibility .5s;
     transition: background-color .3s, 
       opacity .5s, visibility .5s;
     opacity: 0;
