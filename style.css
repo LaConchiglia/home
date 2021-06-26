@@ -43,6 +43,16 @@ h1 {
     font-family: PTSansBold;
 }
 
+a {
+    font-weight: 500;
+    text-decoration: underline;
+    color: rgb(123, 41, 82);
+}
+
+a:hover {
+    color: rgb(218, 129, 100);
+}
+
 h3 {
     font-family: PTSansReg;
 }
