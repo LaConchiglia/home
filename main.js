@@ -13,7 +13,7 @@ $(".en").click( clickLang );
 var btn = $('#button');
 
 $(window).scroll(function() {
-  if ($(window).scrollTop() > 300) {
+  if ($(window).scrollTop() > 800) {
     btn.addClass('show');
     video.pause();
   } else {
