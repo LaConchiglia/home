@@ -17,8 +17,10 @@ $(window).scroll(function() {
     btn.addClass('show');
     video.pause();
   } else {
+    if ( $(window).scrollTop() < 3 && $(window).scrollTop() > -1 ){
     btn.removeClass('show');
     video.play();
+    }
   }
 });
 
