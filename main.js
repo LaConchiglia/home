@@ -15,8 +15,10 @@ var btn = $('#button');
 $(window).scroll(function() {
   if ($(window).scrollTop() > 300) {
     btn.addClass('show');
+    video.pause();
   } else {
     btn.removeClass('show');
+    video.play();
   }
 });
 

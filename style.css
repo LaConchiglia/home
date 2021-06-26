@@ -103,7 +103,8 @@ h3 {
 }
 
 .active-l {
-    outline: solid black 3px;
+    outline: solid black 1px;
+    outline-offset: 2px;
 }
 
 .video-banner {
