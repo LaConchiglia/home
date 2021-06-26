@@ -119,14 +119,15 @@ h3 {
     text-align: center;
     border-radius: 50px;
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 50px;
+    right: 50px;
     transition: background-color .3s, 
       opacity .5s, visibility .5s;
     opacity: 0;
     visibility: hidden;
     z-index: 1000;
   }
+
   #button::after {
     content: "\f077";
     font-family: FontAwesome;
@@ -147,3 +148,10 @@ h3 {
     opacity: 1;
     visibility: visible;
   }
+
+
+
+a.dark {
+    color: black;
+    font-family: PTSansBold;
+}
