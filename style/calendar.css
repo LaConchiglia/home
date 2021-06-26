@@ -109,9 +109,7 @@ dd {
   margin: 0 0 0 40px;
 }
 
-menu,
-ol,
-ul {
+menu {
   padding: 0 0 0 40px;
 }
 
@@ -221,21 +219,6 @@ body {
   height: 100%;
 }
 
-.days-of-the-week {
-  width: 50%;
-  float: left;
-}
-
-.days-of-the-week p {
-  color: rgba(0, 0, 0, 0.25);
-  transition: color 0.5s linear, padding 0.5s linear;
-}
-
-.days-of-the-week p.active-day {
-  padding-left: 10px;
-  color: #fff;
-}
-
 .background-color-month,
 .slide-animation {
   min-height: 100%;
@@ -244,11 +227,6 @@ body {
 .background-color-month {
   transition: background-color 0.5s linear;
   padding: 60px 20px 20px;
-}
-
-body {
-  font-family: sans-serif;
-  color: #fff;
 }
 
 .calendar {
@@ -316,6 +294,7 @@ body {
 
 .calendar-head .arrow-left svg,
 .calendar-head .arrow-right svg {
+  z-index: 999;
   color: #fff;
   stroke: #fff;
   transition: color 0.5s, stroke 0.5s;
