@@ -78,7 +78,7 @@ h3 {
 }
 
 .image {
-    height: 180px;
+    height: 140px;
     margin: auto auto auto 0px;
 }
 
@@ -103,7 +103,7 @@ h3 {
 }
 
 .active-l {
-    box-shadow:inset 0 0 0 200px rgba(10, 10, 10, 0.125);
+    outline: solid black 3px;
 }
 
 .video-banner {
