@@ -122,8 +122,12 @@ h3 {
 }
 
 .active-l {
-    outline: solid black 1px;
-    outline-offset: 2px;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    border: solid white 1px;
+    -webkit-box-shadow: 0 0 0 1px black;
+            box-shadow: 0 0 0 1px black;
 }
 
 .video-banner {
