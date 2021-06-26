@@ -83,7 +83,7 @@
                         Gli elaborati da consegnare saranno in formato PDF e dovranno contenere:
                     
                         <ol class="ml-md-5 ml-sm-3">
-                            <li class="pt-2">
+                            <li class="pt-1">
                                 File 1 Breve relazione descrittiva. La relazione dovrà includere quanto segue: 
                                 <ol type="a">
                                     <li>il concept generale del progetto;</li>
@@ -122,7 +122,7 @@
                             <div class="calendar-head">
                                 <div class="arrow-left" ng-click="cal.previousMonth(cal.currentMonth.date)">
                                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 18.5 32.9" style="enable-background:new 0 0 18.5 32.9;" xml:space="preserve">
+                                    viewBox="0 0 18.5 32.9" xml:space="preserve">
                                 <style type="text/css">
                                     .st0{fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
                                     </style>
@@ -142,7 +142,7 @@
                             </div>
                             <div class="calendar-body">
                                 <p class="day" ng-repeat="dayShort in cal.days.short track by $index">{{dayShort}}</p>
-                                <p class="date" ng-repeat="date in cal.currentMonth.dates track by $index" ng-class="{'selected': date.selected, 'today': date.today, 'show': date.show === false}" ng-click="cal.SelectDate(date.id, date.show)">{{date.date.getDate()}}</p>
+                                <p class="date" ng-repeat="date in cal.currentMonth.dates track by $index" ng-class="{'selected': date.selected, 'today': date.today, 'show': date.show === false}">{{date.date.getDate()}}</p>
                             </div>
                         </div>
             

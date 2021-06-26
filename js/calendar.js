@@ -1,34 +1,66 @@
 var app = angular.module("calendarApp", []);
 app.controller("CalendarCtrl", function () {
   var today = new Date();
+  var selectedDay1 = new Date(2021, 05, 28, 0, 0, 0, 0);
+  var selectedDay2 = new Date(2021, 08, 03, 0, 0, 0, 0);
+  var selectedDay3 = new Date(2021, 08, 20, 0, 0, 0, 0);
 
   this.days = {
-    long: [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ],
-    short: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    long: it
+      ? [
+          "Domenica",
+          "Lunedì",
+          "Martedì",
+          "Mercoledì",
+          "Giovedì",
+          "Venerdì",
+          "Sabato",
+        ]
+      : [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+    short: it
+      ? ["Dom", "Lun", "Mar", "Mer", "Gio", "Ven", "Sab"]
+      : ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
   };
-  this.months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
+  this.months = it
+    ? [
+        "Gennaio",
+        "Febbraio",
+        "Marzo",
+        "Aprile",
+        "Maggio",
+        "Giugno",
+        "Luglio",
+        "Agosto",
+        "Settembre",
+        "Ottobre",
+        "Novembre",
+        "Dicembre",
+      ]
+    : [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
   var firstweekRemainder;
+
+  console.log(it);
 
   this.todayDate = today.getDate();
   this.todayDay = today.getDay();
@@ -36,6 +68,9 @@ app.controller("CalendarCtrl", function () {
   this.todayYear = today.getFullYear();
   this.todayDayName = this.days.long[this.todayDay];
   this.todayMonthName = this.months[this.todayMonth];
+
+  console.log(this.today);
+  console.log(this.todayDate);
 
   var lastDay = new Date(this.todayYear, this.todayMonth + 1, 0);
 
@@ -120,7 +155,11 @@ app.controller("CalendarCtrl", function () {
           id: "id" + i,
           show: true,
         });
-      } else if (this.compareDates(newDate, this.selectedDate)) {
+      } else if (
+        this.compareDates(newDate, selectedDay1) ||
+        this.compareDates(newDate, selectedDay2) ||
+        this.compareDates(newDate, selectedDay3)
+      ) {
         this.currentMonth.dates.push({
           date: newDate,
           today: false,

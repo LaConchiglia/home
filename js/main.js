@@ -1,9 +1,12 @@
 console.log("Initialized. \n Lang=it");
 
+var it = true;
+
 const clickLang = function () {
   if (!$(this).hasClass("active-l")) {
     $(".it").toggleClass("active-l");
     $(".en").toggleClass("active-l");
+    it = !it;
   }
 };
 
